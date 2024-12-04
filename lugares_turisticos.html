@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares Turísticos de Paucartambo</title>
+    
+    <!-- CSS de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Librerías de Animación -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <!-- Tus Hojas de Estilos Personalizadas -->
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/lugares_turisticos.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagenes/logo_municipalidad.png" alt="Logo Municipalidad" width="40" height="40" class="d-inline-block align-top">
+                Municipalidad de Paucartambo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="lugares_historicos.html">Lugares Históricos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="lugares_turisticos.html">Lugares Turísticos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="danzas.html">Danzas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Encabezado -->
+    <header class="header-section" id="inicio">
+        <div class="overlay"></div>
+        <div class="header-content text-center">
+            <h1 class="animate__animated animate__fadeInDown">Lugares Turísticos de Paucartambo</h1>
+            <p class="lead animate__animated animate__fadeInUp animate__delay-1s">Descubre los destinos más fascinantes de nuestro pueblo</p>
+        </div>
+    </header>
+
+    <!-- Botones de Navegación -->
+    <div class="container my-4 text-center">
+        <div class="button-container">
+            <a href="index.html" class="btn-custom me-2 mb-2">Inicio</a>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nuestros Lugares Turísticos</h2>
+            <p>Explora la belleza y la riqueza natural que Paucartambo tiene para ofrecer.</p>
+        </div>
+
+        <!-- Lugares Turísticos -->
+        <!-- Mirador Tres Cruces -->
+        <section class="tourist-section mb-5" id="mirador-tres-cruces">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <img src="imagenes/mirador_tres_cruces.jpg" alt="Mirador Tres Cruces" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h3>Mirador Tres Cruces</h3>
+                    <p>El Mirador Tres Cruces, también conocido como «El Balcón del Oriente», es un destino singular en el mundo que ofrece una experiencia única.</p>
+                    <button class="btn btn-primary mt-3" onclick="toggleDetails('details1')">Ver más detalles</button>
+                    <div id="details1" class="details mt-3">
+                        <h4>Lo que debes llevar:</h4>
+                        <ul>
+                            <li>Ropa de abrigo</li>
+                            <li>Calzado cómodo</li>
+                            <li>Protección solar</li>
+                            <li>Agua y snacks</li>
+                        </ul>
+                        <h4>Qué debes tener en cuenta:</h4>
+                        <ul>
+                            <li>La altura puede causar mal de montaña.</li>
+                            <li>El acceso puede ser complicado en temporada de lluvias.</li>
+                        </ul>
+                        <h4>Detalles para ir:</h4>
+                        <p>En este lugar, se puede presenciar el solsticio de invierno acompañado de efectos ópticos al amanecer, donde el sol parece reflejarse sobre las nubes que envuelven la imponente selva del Parque Nacional del Manu. Desde el balcón natural de Acjanaco, ubicado en Challabamba, los visitantes pueden disfrutar de la salida del sol entre el 20 de junio y el 20 de julio. Esta experiencia se enmarca en un paisaje espectacular compuesto por el bosque nublado, una cadena montañosa y el majestuoso río Paucartambo.</p>
+                        <h4>Ubicación:</h4>
+                        <p>Mirador Tres Cruces, Q'eswachaka, Paucartambo, Cusco, Perú</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Puente Colonial Carlos III -->
+        <section class="tourist-section mb-5" id="puente-carlos-iii">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2" data-aos="fade-left">
+                    <img src="imagenes/puente_colonial_carlos_iii.jpg" alt="Puente Colonial Carlos III" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 order-md-1" data-aos="fade-right">
+                    <h3>Puente Colonial Carlos III</h3>
+                    <p>Construido por disposición de Carlos III de España entre 1716 y 1788.</p>
+                    <button class="btn btn-primary mt-3" onclick="toggleDetails('details3')">Ver más detalles</button>
+                    <div id="details3" class="details mt-3">
+                        <h4>Lo que debes llevar:</h4>
+                        <ul>
+                            <li>Cámara fotográfica</li>
+                            <li>Calzado cómodo</li>
+                        </ul>
+                        <h4>Qué debes tener en cuenta:</h4>
+                        <ul>
+                            <li>Es un sitio histórico y culturalmente significativo.</li>
+                            <li>Respetar las normas de conservación del lugar.</li>
+                        </ul>
+                        <h4>Detalles para ir:</h4>
+                        <p>El Puente Colonial Carlos III es una obra arquitectónica del siglo XVIII construida durante el reinado de Carlos III de España. Este puente de piedra y argamasa, con un único arco de medio punto, refleja la ingeniería y el diseño colonial español. Es un símbolo cultural de Paucartambo y juega un papel central en la festividad de la Virgen del Carmen, atrayendo tanto a locales como a visitantes. Su conservación es vital para mantener su integridad estructural y su valor histórico.</p>
+                        <h4>Ubicación:</h4>
+                        <p>Puente Colonial Carlos III, Av. Carlos III, Paucartambo, Cusco, Perú</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Templo Colonial de Paucartambo -->
+        <section class="tourist-section mb-5" id="templo-colonial">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <img src="imagenes/templo_colonial_paucartambo.jpg" alt="Templo Colonial de Paucartambo" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h3>Templo Colonial de Paucartambo</h3>
+                    <p>Conocido como la Iglesia de Nuestra Señora del Rosario, es una destacada iglesia del siglo XVIII ubicada en Paucartambo, Cusco.</p>
+                    <button class="btn btn-primary mt-3" onclick="toggleDetails('details4')">Ver más detalles</button>
+                    <div id="details4" class="details mt-3">
+                        <h4>Lo que debes llevar:</h4>
+                        <ul>
+                            <li>Cámara fotográfica</li>
+                            <li>Calzado cómodo</li>
+                            <li>Guía turística</li>
+                        </ul>
+                        <h4>Qué debes tener en cuenta:</h4>
+                        <ul>
+                            <li>La entrada puede tener un costo.</li>
+                            <li>El horario de visitas puede variar.</li>
+                        </ul>
+                        <h4>Detalles para ir:</h4>
+                        <p>Este templo es un excelente ejemplo de la arquitectura colonial española, combinando elementos barrocos y renacentistas. Construido con piedra y adobe, presenta una fachada tallada y un interior adornado con retablos, frescos y pinturas coloniales. Es un importante centro de devoción, especialmente durante la festividad de la Virgen del Carmen, y ha sido objeto de esfuerzos de conservación para preservar su valor histórico y cultural.</p>
+                        <h4>Ubicación:</h4>
+                        <p>Templo Colonial de Paucartambo, Costado Plazoleta Kukuli, Paucartambo, Cusco, Perú</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mirador del Papa Juan Pablo -->
+        <section class="tourist-section mb-5" id="mirador-papa-juan-pablo">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2" data-aos="fade-left">
+                    <img src="imagenes/mirador_papa_juan_pablo.jpg" alt="Mirador del Papa Juan Pablo" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 order-md-1" data-aos="fade-right">
+                    <h3>Mirador del Papa Juan Pablo</h3>
+                    <p>Estatua de Juan Pablo II para recordar su visita en 1985.</p>
+                    <button class="btn btn-primary mt-3" onclick="toggleDetails('details5')">Ver más detalles</button>
+                    <div id="details5" class="details mt-3">
+                        <h4>Lo que debes llevar:</h4>
+                        <ul>
+                            <li>Cámara fotográfica</li>
+                            <li>Calzado cómodo</li>
+                            <li>Protección solar</li>
+                        </ul>
+                        <h4>Qué debes tener en cuenta:</h4>
+                        <ul>
+                            <li>El acceso puede ser complicado en temporada de lluvias.</li>
+                        </ul>
+                        <h4>Detalles para ir:</h4>
+                        <p>Este mirador ofrece una vista panorámica impresionante y alberga una estatua de Juan Pablo II, conmemorada en 1985. Es un lugar significativo para recordar la coronación de la Mamacha Carmen.</p>
+                        <h4>Ubicación:</h4>
+                        <p>Mirador del Papa Juan Pablo, Alto Paucartambo, Paucartambo, Cusco, Perú</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Baños Termales de Chimur -->
+        <section class="tourist-section mb-5" id="banos-termales-chimur">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <img src="imagenes/banos_termales_chimur.jpg" alt="Baños Termales de Chimur" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h3>Baños Termales de Chimur</h3>
+                    <p>Se encuentra a una altitud de 2800 m.s.n.m. hacia el lado este del poblado de Chimur.</p>
+                    <button class="btn btn-primary mt-3" onclick="toggleDetails('details6')">Ver más detalles</button>
+                    <div id="details6" class="details mt-3">
+                        <h4>Lo que debes llevar:</h4>
+                        <ul>
+                            <li>Ropa de baño</li>
+                            <li>Toalla</li>
+                            <li>Ropa cómoda</li>
+                            <li>Calzado adecuado para caminata</li>
+                        </ul>
+                        <h4>Qué debes tener en cuenta:</h4>
+                        <ul>
+                            <li>La temperatura del agua puede ser alta.</li>
+                        </ul>
+                        <h4>Detalles para ir:</h4>
+                        <p>Las aguas termales de Chimur tienen una temperatura de 60 a 80 grados. El área está rodeada por una exuberante vegetación, creando un microclima especial y atractivo. Ideal para relajarse y disfrutar de la naturaleza.</p>
+                        <h4>Ubicación:</h4>
+                        <p>Baños Termales de Chimur, Chimur, Challabamba, Cusco, Perú</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sitio Arqueológico de Watoccto -->
+        <section class="tourist-section mb-5" id="sitio-arqueologico-watoccto">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2" data-aos="fade-left">
+                    <img src="imagenes/sitio_arqueologico_watoccto.jpg" alt="Sitio Arqueológico de Watoccto" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 order-md-1" data-aos="fade-right">
+                    <h3>Sitio Arqueológico de Watoccto</h3>
+                    <p>Ubicado a una distancia de 15km de Paucartambo.</p>
+                    <button class="btn btn-primary mt-3" onclick="toggleDetails('details7')">Ver más detalles</button>
+                    <div id="details7" class="details mt-3">
+                        <h4>Lo que debes llevar:</h4>
+                        <ul>
+                            <li>Ropa cómoda</li>
+                            <li>Calzado adecuado para caminata</li>
+                            <li>Agua y snacks</li>
+                            <li>Cámara fotográfica</li>
+                        </ul>
+                        <h4>Qué debes tener en cuenta:</h4>
+                        <ul>
+                            <li>El acceso puede ser complicado en temporada de lluvias.</li>
+                        </ul>
+                        <h4>Detalles para ir:</h4>
+                        <p>Importante monumento arqueológico de arquitectura Inca, presenta muros ligeramente inclinados y otras edificaciones impresionantes. Se recomienda visitarlo con un guía local.</p>
+                        <h4>Ubicación:</h4>
+                        <p>Sitio Arqueológico de Watoccto, Colquepata, Paucartambo, Cusco, Perú</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container my-4 text-center">
+                <div class="button-container">
+                    <a href="index.html" class="btn-custom me-2 mb-2">Inicio</a>
+                    <a href="lugares_historicos.html" class="btn-custom me-2 mb-2">Lugares Históricos</a>
+                    <a href="danzas.html" class="btn-custom mb-2">Danzas</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-white">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5>Contacto</h5>
+                    <p>
+                        Unidad de Informática y de Sistemas de la Municipalidad Provincial de Paucartambo © 2024
+                    </p>
+                    <p>
+                        Elaborado por: <strong>Nelson J. Alvaro Alvaro</strong>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Síguenos</h5>
+                    <a href="https://www.facebook.com/MuniPaucartambo2023.2026/?locale=es_LA" target="_blank" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="https://github.com/alvaro1-2" target="_blank" class="text-white me-3"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="mailto:nelsonalvaj@gmail.com" class="text-white me-3"><i class="fas fa-envelope fa-2x"></i></a>
+                    <a href="https://wa.me/+51900247055" target="_blank" class="text-white"><i class="fab fa-whatsapp fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de Ir Arriba -->
+    <a href="#inicio" class="btn btn-primary btn-ir-arriba" id="btnIrArriba"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts de JavaScript -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Librerías de Animación -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Tu Archivo de Scripts Personalizado -->
+    <script src="scripts/lugares_turisticos.js"></script>
+
+    <!-- Inicializar AOS -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+/* estilos/estilos.css */
+
+/* Paleta de Colores */
+:root {
+    --primary-color: #0099cc;      /* Azul Turquesa */
+    --secondary-color: #ff5722;    /* Naranja Profundo */
+    --accent-color: #ffc107;       /* Ámbar */
+    --background-color: #ffffff;   /* Blanco */
+    --text-color: #333333;         /* Gris Oscuro */
+    --light-text-color: #ffffff;   /* Blanco */
+    --dark-text-color: #000000;    /* Negro */
+    --footer-background-color: #002f3b; /* Azul Oscuro */
+    --overlay-color: rgba(0, 0, 0, 0.5); /* Negro Transparente */
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Navbar */
+#navbar {
+    background-color: var(--footer-background-color);
+    transition: background-color 0.5s ease;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: var(--light-text-color) !important;
+    font-weight: bold;
+}
+
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: var(--light-text-color);
+}
+
+/* Cambiar el color del navbar al hacer scroll */
+.scrolled {
+    background-color: var(--primary-color) !important;
+}
+
+/* Header Section */
+.header-section {
+    position: relative;
+    height: 100vh;
+    background: url('../imagenes/imagen_fondo.png') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-text-color);
+}
+
+.header-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay-color);
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 15px;
+}
+
+.header-content .galardon {
+    max-width: 150px;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-content .lead {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.header-content .btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+}
+
+/* Secciones */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    color: var(--primary-color);
+}
+
+.section-title::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.container p, .container li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.parallax-section {
+    position: relative;
+    background: url('../imagenes/imagen_parallax.jpg') center center/cover fixed no-repeat;
+    padding: 100px 15px;
+    color: var(--light-text-color);
+    text-align: center;
+}
+
+.parallax-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay-color);
+}
+
+/* Cambiar el color del texto en la sección parallax */
+.parallax-section .container p,
+.parallax-section .container li {
+    color: var(--light-text-color);
+}
+
+/* Responsividad de la imagen detalles_galardo.jpg y su texto */
+.detalles-galardo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .detalles-galardo {
+        flex-direction: column;
+    }
+    .detalles-galardo .col-md-6 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+/* Aumentar tamaño de fuente en 'Impacto del Reconocimiento' */
+.impacto-reconocimiento p,
+.impacto-reconocimiento li {
+    font-size: 1.3rem;
+}
+
+/* Listas */
+.list-unstyled li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.list-unstyled li i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+/* Botones personalizados */
+.btn-custom {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-custom:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-custom {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+/* Botón de Ir Arriba */
+.btn-ir-arriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    z-index: 99;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.btn-ir-arriba:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--footer-background-color);
+}
+
+.footer h5 {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.footer p {
+    color: var(--light-text-color);
+}
+
+.footer a {
+    color: var(--light-text-color);
+}
+
+.footer a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.footer .fab,
+.footer .fas {
+    transition: color 0.3s ease;
+}
+
+.footer .fab:hover,
+.footer .fas:hover {
+    color: var(--accent-color);
+}
+
+/* Animaciones Personalizadas */
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+    .header-content h1 {
+        font-size: 3rem;
+    }
+    .header-content .lead {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+    .header-content .lead {
+        font-size: 1.1rem;
+    }
+    .header-content .btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+    /* Ajustes adicionales para móviles */
+    .impacto-reconocimiento p,
+    .impacto-reconocimiento li {
+        font-size: 1.2rem;
+    }
+    .btn-custom {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-content .galardon {
+        max-width: 100px;
+    }
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    .header-content .lead {
+        font-size: 1rem;
+    }
+    .btn-ir-arriba {
+        padding: 10px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .container p,
+    .container li {
+        font-size: 1rem;
+    }
+    /* Ajustes adicionales para móviles */
+    .impacto-reconocimiento p,
+    .impacto-reconocimiento li {
+        font-size: 1.1rem;
+    }
+    .btn-custom {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}

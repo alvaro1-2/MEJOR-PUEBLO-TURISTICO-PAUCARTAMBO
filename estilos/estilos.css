@@ -131,6 +131,7 @@ a:hover {
     color: var(--text-color);
 }
 
+/* Sección Parallax */
 .parallax-section {
     position: relative;
     background: url('../imagenes/imagen_parallax.jpg') center center/cover fixed no-repeat;
@@ -149,33 +150,14 @@ a:hover {
     background-color: var(--overlay-color);
 }
 
-/* Cambiar el color del texto en la sección parallax */
-.parallax-section .container p,
-.parallax-section .container li {
+.parallax-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ajustes de Texto en Sección Parallax */
+.parallax-section p, .parallax-section li {
     color: var(--light-text-color);
-}
-
-/* Responsividad de la imagen detalles_galardo.jpg y su texto */
-.detalles-galardo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .detalles-galardo {
-        flex-direction: column;
-    }
-    .detalles-galardo .col-md-6 {
-        max-width: 100%;
-        flex: 0 0 100%;
-    }
-}
-
-/* Aumentar tamaño de fuente en 'Impacto del Reconocimiento' */
-.impacto-reconocimiento p,
-.impacto-reconocimiento li {
-    font-size: 1.3rem;
 }
 
 /* Listas */
@@ -190,7 +172,7 @@ a:hover {
     margin-right: 10px;
 }
 
-/* Botones personalizados */
+/* Botones Personalizados */
 .btn-custom {
     background-color: var(--primary-color);
     color: var(--light-text-color);
@@ -210,7 +192,7 @@ a:hover {
     background-color: var(--secondary-color);
 }
 
-/* Contenedor de botones */
+/* Contenedor de Botones */
 .button-container {
     display: flex;
     flex-wrap: wrap;
@@ -280,6 +262,29 @@ a:hover {
     color: var(--accent-color);
 }
 
+/* Estilos para la Sección de Documento de Reconocimiento */
+.pdf-container {
+    margin-top: 30px;
+}
+
+.pdf-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#documento .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+#documento .btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
 /* Animaciones Personalizadas */
 [data-aos] {
     opacity: 0;
@@ -313,11 +318,7 @@ a:hover {
         font-size: 1rem;
         padding: 12px 25px;
     }
-    /* Ajustes adicionales para móviles */
-    .impacto-reconocimiento p,
-    .impacto-reconocimiento li {
-        font-size: 1.2rem;
-    }
+    /* Ajustes para botones personalizados */
     .btn-custom {
         font-size: 1rem;
         padding: 12px 25px;
@@ -346,11 +347,7 @@ a:hover {
     .container li {
         font-size: 1rem;
     }
-    /* Ajustes adicionales para móviles */
-    .impacto-reconocimiento p,
-    .impacto-reconocimiento li {
-        font-size: 1.1rem;
-    }
+    /* Ajustes para botones personalizados en móviles */
     .btn-custom {
         font-size: 0.9rem;
         padding: 10px 20px;

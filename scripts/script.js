@@ -56,4 +56,9 @@ $(document).ready(function() {
             $(this).removeClass('animate__animated animate__heartBeat');
         }
     );
+
+    // Animaciones para la Sección del Documento de Reconocimiento
+    ScrollReveal().reveal('#documento .section-title', { delay: 200, distance: '50px', easing: 'ease-in', origin: 'bottom' });
+    ScrollReveal().reveal('#documento .pdf-container', { delay: 400, distance: '50px', easing: 'ease-in', origin: 'bottom' });
+    ScrollReveal().reveal('#documento .btn', { delay: 600, distance: '50px', easing: 'ease-in', origin: 'bottom' });
 });
